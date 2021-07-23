@@ -14,8 +14,8 @@ async def main():  # <-- coroutine object
     print("Nice to meet you")  # wait 'async' function to be executed first before this line.
 
 
-# what if we want to execute "Nice to meet you" while 'async' function is waiting?
-# Well, we use 'task'
+# what if we want to execute "Nice to meet you" while 'async' function is waiting? in other words, concurrently.
+# Well, we use 'task', which is a event loop
 async def main2():
     print("Hello, there ")
     task = asyncio.create_task(foo('Lynn'))
